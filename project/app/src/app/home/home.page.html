@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header-content">
+      <ion-img src="https://cdn3d.iconscout.com/3d/premium/thumb/libro-de-recetas-de-comida-9167033-7471134.png" class="logo-image"></ion-img>
+      <ion-title>
+        Inicio de Sesión
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div class="header-content">
+        <ion-img src="https://cdn3d.iconscout.com/3d/premium/thumb/libro-de-recetas-de-comida-9167033-7471134.png" class="logo-image-condensed"></ion-img>
+        <ion-title size="large" class="title-animation">Inicio de Sesión</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-input id="nombre" [(ngModel)]="nombre" label="Nombre" labelPlacement="floating" placeholder="Tu nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input id="apellido" [(ngModel)]="apellido" label="Apellido" labelPlacement="floating" placeholder="Tu apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-datetime [(ngModel)]="fechaNacimiento" display-format="MM/DD/YYYY" class="small-datetime"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="correo" label="Correo" labelPlacement="floating" placeholder="tucorreo@tudominio.cl" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Contraseña" [(ngModel)]="clave" labelPlacement="floating" placeholder="Enter text" type="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="clearInputs()">Limpiar Campos</ion-button>
+    <ion-button expand="block" (click)="PasarDatos()">Enviar Datos</ion-button>
+  </div>
+</ion-content>
